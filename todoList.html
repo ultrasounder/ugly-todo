@@ -4,13 +4,34 @@
   
   <title>Document</title>
 </head>
+
 <body>
   <script>
     var todos = ['item 1', 'itetm 2', 'item 3'];
+
     console.log(todos);
+    
     todos.push('item 4');
+    
     todos[0] = 'item 1 updated';
+    
     todos.splice(0,1);
+
+    //function to add an item to the ugly-todolist
+
+    function add(item){
+      todos.push(item);
+    }
+
+    //function to update an item
+    function  update(index, string){
+      todos[index] = string;
+    }
+
+    //function to remove an item from ugly-todolist
+    function remove(index){
+      todos.pop(index);
+    }
   </script>
   
 </body>
