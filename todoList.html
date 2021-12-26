@@ -36,14 +36,42 @@
     }
 
     //function to update an item
-    function update(index, string) {
-      todos[index] = string;
+    //rewrite so the second argument is saved to property on on object at `position`.
+    //edit(0, 'Item 1 edited');
+    function update(index, newTodoText) {
+      todos[index].todoText = newTodoText;
     }
 
     //function to remove an item from ugly-todolist
     function remove(index) {
-      todos.pop(index);
+      todos.splice(index, 1);
     }
+
+    // toggle(0);
+    // {todoText: 'item1', completed:true},
+    // toggle(0);
+    //{todoText: 'item1', completed:false},
+
+    function toggle(index){
+      //if the todo at index has .completed equal to false 
+      // make .completed true
+      // if the todo at index has .completed equal to true
+      // make .completed fasle
+
+      if (todos[index].completed === false){
+        //will run if  condition is true.
+        todos[index].completed = true;
+      }else{
+        //will run if condition is false.
+        todos[index].completed = false;
+      }
+      console.log(todos);
+
+    }
+
+    //two different types of datatypes in javascript. 
+    //{} objects-> Arrays, lists, functions; as complex as you want them to be
+    //primitives-> todoList, String, Booleans, Undefined, Number, NULL
   </script>
 
 </body>
